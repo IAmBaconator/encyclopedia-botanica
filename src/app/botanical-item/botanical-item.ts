@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 import { DUMMY_ITEMS } from '../dummy-items';
 
@@ -11,17 +11,18 @@ const randomIndex = Math.floor(Math.random() * DUMMY_ITEMS.length)
   styleUrl: './botanical-item.css'
 })
 export class BotanicalItem {
-  selectedBotanicalItem = DUMMY_ITEMS[randomIndex];
+  selectedBotanicalItem = signal(DUMMY_ITEMS[randomIndex]);
+  //Angular 16+ option, signals, this is the setter for your imagePath which will automatically update if changed elseware in the app.
+  imagePath = computed(() => 'assets/botanical-items' + this.selectedBotanicalItem().avatar)
 
   // Caculate the image path to keep this off the HTML template.
-  get imagePath() {
-    return 'assets/botanical-items' + this.selectedBotanicalItem.avatar
-  }
+  //get imagePath() {
+  //  return 'assets/botanical-items' + this.selectedBotanicalItem.avatar
+  //}
 
   onSelectBotanicalItem() {
     //console.log('Clicked!');
     const randomIndex = Math.floor(Math.random() * DUMMY_ITEMS.length)
-    this.selectedBotanicalItem = DUMMY_ITEMS[randomIndex];
-
+    this.selectedBotanicalItem.set(DUMMY_ITEMS[randomIndex]);
   }
 }
