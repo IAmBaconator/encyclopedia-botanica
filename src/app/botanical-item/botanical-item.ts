@@ -19,6 +19,9 @@ export class BotanicalItem {
   }
 
   onSelectBotanicalItem() {
-    console.log('Clicked!');
+    //console.log('Clicked!');
+    const randomIndex = Math.floor(Math.random() * DUMMY_ITEMS.length)
+    this.selectedBotanicalItem = DUMMY_ITEMS[randomIndex];
+
   }
 }
