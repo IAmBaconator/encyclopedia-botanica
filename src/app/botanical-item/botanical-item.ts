@@ -17,4 +17,8 @@ export class BotanicalItem {
   get imagePath() {
     return 'assets/botanical-items' + this.selectedBotanicalItem.avatar
   }
+
+  onSelectBotanicalItem() {
+    console.log('Clicked!');
+  }
 }
