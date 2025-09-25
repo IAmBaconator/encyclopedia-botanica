@@ -1,9 +1,9 @@
-import { Component, computed, signal } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { DUMMY_ITEMS } from '../dummy-items';
+//import { DUMMY_ITEMS } from '../dummy-items';
 
 // Setup randomization to dynamically select a random user from the DUMMY_ITEMS array.
-const randomIndex = Math.floor(Math.random() * DUMMY_ITEMS.length)
+//const randomIndex = Math.floor(Math.random() * DUMMY_ITEMS.length)
 
 @Component({
   selector: 'app-botanical-item',
@@ -11,9 +11,9 @@ const randomIndex = Math.floor(Math.random() * DUMMY_ITEMS.length)
   styleUrl: './botanical-item.css'
 })
 export class BotanicalItem {
-  selectedBotanicalItem = signal(DUMMY_ITEMS[randomIndex]);
+  //selectedBotanicalItem = signal(DUMMY_ITEMS[randomIndex]);
   //Angular 16+ option, signals, this is the setter for your imagePath which will automatically update if changed elseware in the app.
-  imagePath = computed(() => 'assets/botanical-items' + this.selectedBotanicalItem().avatar)
+  //imagePath = computed(() => 'assets/botanical-items' + this.selectedBotanicalItem().avatar)
 
   // Caculate the image path to keep this off the HTML template.
   //get imagePath() {
@@ -22,7 +22,7 @@ export class BotanicalItem {
 
   onSelectBotanicalItem() {
     //console.log('Clicked!');
-    const randomIndex = Math.floor(Math.random() * DUMMY_ITEMS.length)
-    this.selectedBotanicalItem.set(DUMMY_ITEMS[randomIndex]);
+    //const randomIndex = Math.floor(Math.random() * DUMMY_ITEMS.length)
+    //this.selectedBotanicalItem.set(DUMMY_ITEMS[randomIndex]);
   }
 }
