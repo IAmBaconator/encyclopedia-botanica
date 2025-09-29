@@ -14,7 +14,8 @@ export class BotanicalItem {
   select = output<string>(); // Declares an output that emits strings
 
   imagePath = computed(() => {
-    return 'assets/botanical-items/' + this.avatar();
+    // return 'assets/botanical-items/' + this.avatar(); // Add back in after I import my own flowers
+    return this.avatar();
   });
 
   onSelectBotanicalItem() {

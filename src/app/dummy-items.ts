@@ -1,32 +1,32 @@
 export const DUMMY_ITEMS = [
   {
     id: 'i1',
-    name: 'flower1',
-    avatar: 'item-1.jpg',
+    name: 'Alstroemeria',
+    avatar: 'https://floralife.com/wp-content/uploads/2021/10/Alstroemeria-640x427.jpg',
   },
   {
     id: 'i2',
-    name: 'flower2',
-    avatar: 'item-2.jpg',
+    name: 'Anemone',
+    avatar: 'https://floralife.com/wp-content/uploads/2021/10/Anemone-640x427.jpg',
   },
   {
     id: 'i3',
-    name: 'flower3',
-    avatar: 'item-3.jpg',
+    name: 'Lily Asiatic',
+    avatar: 'https://floralife.com/wp-content/uploads/2021/10/Lily-Asiatic-640x427.jpg',
   },
   {
     id: 'i4',
-    name: 'flower4',
-    avatar: 'item-4.jpg',
+    name: 'Matsumoto Aster',
+    avatar: 'https://floralife.com/wp-content/uploads/2023/02/Matsumoto-Aster_DT_2560x1790-640x448.jpg',
   },
   {
     id: 'i5',
-    name: 'flower5',
-    avatar: 'item-5.jpg',
+    name: 'Bells of Ireland',
+    avatar: 'https://floralife.com/wp-content/uploads/2023/05/Bells-of-Ireland_DT_570x400.jpg',
   },
   {
     id: 'i6',
-    name: 'flower6',
-    avatar: 'item-6.jpg',
+    name: 'Calla Lily',
+    avatar: 'https://floralife.com/wp-content/uploads/2021/10/Calla-Lily-640x427.jpg',
   },
 ];

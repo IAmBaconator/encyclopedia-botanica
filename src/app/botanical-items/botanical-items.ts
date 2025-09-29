@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 
 @Component({
   selector: 'app-botanical-items',
@@ -9,4 +9,9 @@ import { Component, input } from '@angular/core';
 
 export class BotanicalItems {
   name = input.required<string>();
+  avatar = input.required<string>();
+  imagePath = computed(() => {
+    // return 'assets/botanical-items/' + this.avatar(); // Add back in after I import my own flowers
+    return this.avatar();
+  });
 }
