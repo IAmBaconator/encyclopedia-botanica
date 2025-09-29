@@ -3,7 +3,7 @@
 
         <!-- property binding is the better option that binds the src/alt properties of the underlying HTMLImageElement DOM object to the value. -->
         <img
-            [src] ="imagePath"
+            [src] ="imagePath()"
             [alt]="name()"
         />
         <!-- when storing a property using signal (Angular 16+) you add () since it's now a function -->
