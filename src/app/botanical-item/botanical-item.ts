@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 
 @Component({
   selector: 'app-botanical-item',
@@ -7,14 +7,22 @@ import { Component, Input } from '@angular/core';
 })
 export class BotanicalItem {
 
-  @Input({required: true}) avatar!: string;
-  @Input({required: true}) name!: string;
+  // Input = decorator
+  //@Input({required: true}) avatar!: string;
+  //@Input({required: true}) name!: string;
 
-  get imagePath() {
-    return 'assets/botanical-items/' + this.avatar;
-  }
+  // input = special function for newer setup using with signals
+  avatar = input.required<string>(); // <string> = input<T>(): InputSignal<T>; a TS initialization for an Angular value.
+  name = input.required<string>();
 
-  onSelectBotanicalItem() {
+  imagePath = computed(() => {
+    return 'assets/botanical-items/' + this.avatar();
+  });
 
-  }
+  // When using signals the above is used.
+  //get imagePath() {
+  //  return 'assets/botanical-items/' + this.avatar;
+  //}
+
+  onSelectBotanicalItem() {}
 }
