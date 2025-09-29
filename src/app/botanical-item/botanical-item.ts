@@ -1,4 +1,4 @@
-import { Component, computed, input } from '@angular/core';
+import { Component, computed, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-botanical-item',
@@ -8,12 +8,16 @@ import { Component, computed, input } from '@angular/core';
 export class BotanicalItem {
 
   // input = special function for newer setup using with signals
+  id = input.required<string>();
   avatar = input.required<string>(); // <string> = input<T>(): InputSignal<T>; a TS initialization for an Angular value.
   name = input.required<string>();
+  select = output<string>(); // Declares an output that emits strings
 
   imagePath = computed(() => {
     return 'assets/botanical-items/' + this.avatar();
   });
 
-  onSelectBotanicalItem() {}
+  onSelectBotanicalItem() {
+    this.select.emit(this.id());
+  }
 }

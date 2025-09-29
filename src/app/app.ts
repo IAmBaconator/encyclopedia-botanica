@@ -12,4 +12,8 @@ import { DUMMY_ITEMS } from './dummy-items';
 export class App {
   protected readonly title = signal('encyclopedia-botanica');
   botanicalItems = DUMMY_ITEMS;
+
+  onSelectBotanicalItem(id: string) {
+    console.log('Selected user with id ' + id);
+  }
 }
