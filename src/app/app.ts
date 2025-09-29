@@ -1,13 +1,15 @@
 import { Component, signal } from '@angular/core';
 import { Header } from "./header/header";
 import { BotanicalItem } from "./botanical-item/botanical-item";
+import { DUMMY_ITEMS } from './dummy-items';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, BotanicalItem],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
+  imports: [Header, BotanicalItem]
 })
 export class App {
   protected readonly title = signal('encyclopedia-botanica');
+  botanicalItems = DUMMY_ITEMS;
 }

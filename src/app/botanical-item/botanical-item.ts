@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 //import { DUMMY_ITEMS } from '../dummy-items';
 
@@ -19,6 +19,13 @@ export class BotanicalItem {
   //get imagePath() {
   //  return 'assets/botanical-items' + this.selectedBotanicalItem.avatar
   //}
+
+  @Input() avatar!: string;
+  @Input() name!: string;
+
+  get imagePath() {
+    return 'assets/botanical-items/' + this.avatar;
+  }
 
   onSelectBotanicalItem() {
     //console.log('Clicked!');

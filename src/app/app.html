@@ -3,13 +3,16 @@
 <main>
     <ul id="botanical-items">
         <li>
-            <app-botanical-item />
+            <app-botanical-item [avatar]="botanicalItems[0].avatar" [name]="botanicalItems[0].name" />
         </li>
         <li>
-            <app-botanical-item />
-        </li>        
-            <li>
-            <app-botanical-item />
+            <app-botanical-item [avatar]="botanicalItems[1].avatar" [name]="botanicalItems[1].name" />
+        </li>
+        <li>
+            <app-botanical-item [avatar]="botanicalItems[2].avatar" [name]="botanicalItems[2].name" />
+        </li>
+        <li>
+            <app-botanical-item [avatar]="botanicalItems[3].avatar" [name]="botanicalItems[3].name" />
         </li>
     </ul>
 </main>
