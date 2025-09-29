@@ -1,7 +1,6 @@
 <div>
     <button (click)="onSelectBotanicalItem()">
-        <!-- acceptable for use... but... -->
-        <!--<img src="{{ selectedBotanicalItem.avatar }}" /> -->
+
         <!-- property binding is the better option that binds the src/alt properties of the underlying HTMLImageElement DOM object to the value. -->
         <img
             [src] ="imagePath"
