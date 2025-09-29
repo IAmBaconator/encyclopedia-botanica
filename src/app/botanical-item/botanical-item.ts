@@ -7,8 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class BotanicalItem {
 
-  @Input() avatar!: string;
-  @Input() name!: string;
+  @Input({required: true}) avatar!: string;
+  @Input({required: true}) name!: string;
 
   get imagePath() {
     return 'assets/botanical-items/' + this.avatar;
