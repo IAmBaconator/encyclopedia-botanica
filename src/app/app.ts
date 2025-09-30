@@ -16,7 +16,7 @@ export class App {
   selectedBotanicalItemId = 'i1';
 
   get selectedBotanicalItem() {
-    return this.botanicalItems.find((BotanicalItem) => BotanicalItem.id === this.selectedBotanicalItemId)!;
+    return this.botanicalItems.find((BotanicalItem) => BotanicalItem.id === this.selectedBotanicalItemId);
   }
 
   onSelectBotanicalItem(id: string) {

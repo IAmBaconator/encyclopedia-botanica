@@ -8,8 +8,8 @@ import { Component, computed, input } from '@angular/core';
 })
 
 export class BotanicalItems {
-  name = input.required<string>();
-  profile = input.required<string>();
+  name = input<string>(); // Removed .required to add fallback code to ensure a value is passed after the app.ts name lookup.
+  profile = input<string>();
   imagePath = computed(() => {
     return 'assets/botanical-items/' + this.profile(); // Add back in after I import my own flowers.
   });

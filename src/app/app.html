@@ -36,6 +36,6 @@
         </li>
     </ul>
 
-    <app-botanical-items [name]="selectedBotanicalItem.name" [profile]="selectedBotanicalItem.profile" />
+    <app-botanical-items [name]="selectedBotanicalItem ? selectedBotanicalItem.name : ''" [profile]="selectedBotanicalItem ? selectedBotanicalItem.profile : ''" />
 </main>
 
