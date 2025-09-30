@@ -9,8 +9,8 @@ import { Component, computed, input } from '@angular/core';
 
 export class BotanicalItems {
   name = input.required<string>();
-  avatar = input.required<string>();
+  profile = input.required<string>();
   imagePath = computed(() => {
-    return 'assets/botanical-items/' + this.avatar(); // Add back in after I import my own flowers.
+    return 'assets/botanical-items/' + this.profile(); // Add back in after I import my own flowers.
   });
 }
