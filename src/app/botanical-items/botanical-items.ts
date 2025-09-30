@@ -11,7 +11,6 @@ export class BotanicalItems {
   name = input.required<string>();
   avatar = input.required<string>();
   imagePath = computed(() => {
-    // return 'assets/botanical-items/' + this.avatar(); // Add back in after I import my own flowers
-    return this.avatar();
+    return 'assets/botanical-items/' + this.avatar(); // Add back in after I import my own flowers.
   });
 }
