@@ -1,33 +1,33 @@
 <app-header />
 
 <main>
-    <ul id="botanical-items">
+    <ul id="botanica-items">
         <li>
-            <app-botanical-item
-                [botanicalItemObj]="botanicalItems[0]"
-                (select)="onSelectBotanicalItem($event)"
+            <app-botanica-item
+                [botanicaItemObj]="botanicaItems[0]"
+                (select)="onSelectBotanicaItem($event)"
             />
         </li>
         <li>
-            <app-botanical-item
-                [botanicalItemObj]="botanicalItems[1]"
-                (select)="onSelectBotanicalItem($event)"
+            <app-botanica-item
+                [botanicaItemObj]="botanicaItems[1]"
+                (select)="onSelectBotanicaItem($event)"
             />
         </li>
         <li>
-            <app-botanical-item
-                [botanicalItemObj]="botanicalItems[2]"
-                (select)="onSelectBotanicalItem($event)"
+            <app-botanica-item
+                [botanicaItemObj]="botanicaItems[2]"
+                (select)="onSelectBotanicaItem($event)"
             />
         </li>
         <li>
-            <app-botanical-item
-                [botanicalItemObj]="botanicalItems[3]"
-                (select)="onSelectBotanicalItem($event)"
+            <app-botanica-item
+                [botanicaItemObj]="botanicaItems[3]"
+                (select)="onSelectBotanicaItem($event)"
             />
         </li>
     </ul>
 
-    <app-botanical-items [name]="selectedBotanicalItem ? selectedBotanicalItem.name : ''" [profile]="selectedBotanicalItem ? selectedBotanicalItem.profile : ''" />
+    <app-botanica-items [name]="selectedBotanicaItem ? selectedBotanicaItem.name : ''" [profile]="selectedBotanicaItem ? selectedBotanicaItem.profile : ''" />
 </main>
 

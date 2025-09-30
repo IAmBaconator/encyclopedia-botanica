@@ -1,25 +1,25 @@
 import { Component, signal } from '@angular/core';
 import { Header } from "./header/header";
-import { BotanicalItem } from "./botanical-item/botanical-item";
+import { BotanicaItem } from "./botanica-item/botanica-item";
 import { DUMMY_ITEMS } from './dummy-items';
-import { BotanicalItems } from "./botanical-items/botanical-items";
+import { BotanicaItems } from "./botanica-items/botanica-items";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [Header, BotanicalItem, BotanicalItems]
+  imports: [Header, BotanicaItem, BotanicaItems]
 })
 export class App {
   protected readonly title = signal('encyclopedia-botanica');
-  botanicalItems = DUMMY_ITEMS;
-  selectedBotanicalItemId = 'i1';
+  botanicaItems = DUMMY_ITEMS;
+  selectedBotanicaItemId = 'i1';
 
-  get selectedBotanicalItem() {
-    return this.botanicalItems.find((BotanicalItem) => BotanicalItem.id === this.selectedBotanicalItemId);
+  get selectedBotanicaItem() {
+    return this.botanicaItems.find((BotanicaItem) => BotanicaItem.id === this.selectedBotanicaItemId);
   }
 
-  onSelectBotanicalItem(id: string) {
-    this.selectedBotanicalItemId = id;
+  onSelectBotanicaItem(id: string) {
+    this.selectedBotanicaItemId = id;
   }
 }
