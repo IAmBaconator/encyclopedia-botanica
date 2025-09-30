@@ -1,7 +1,7 @@
 <app-header />
 
 <main>
-    <ul id="botanica-items">
+    <ul id="botanica-details">
         @for (botanicaItem of botanicaItems; track botanicaItem.id) {
             <li>
                 <app-botanica-item [botanicaItemObj]="botanicaItem" (select)="onSelectBotanicaItem($event)" />
@@ -11,7 +11,7 @@
     </ul>
 
     @if (selectedBotanicaItem) {
-            <app-botanica-items [name]="selectedBotanicaItem.name" [profile]="selectedBotanicaItem.profile" />
+            <app-botanica-details [name]="selectedBotanicaItem.name" [profile]="selectedBotanicaItem.profile" />
     } @else {
         <p id="fallback">Select a flower to view!</p>
     }
