@@ -10,6 +10,11 @@
         }
     </ul>
 
-    <app-botanica-items [name]="selectedBotanicaItem ? selectedBotanicaItem.name : ''" [profile]="selectedBotanicaItem ? selectedBotanicaItem.profile : ''" />
+    @if (selectedBotanicaItem) {
+            <app-botanica-items [name]="selectedBotanicaItem.name" [profile]="selectedBotanicaItem.profile" />
+    } @else {
+        <p id="fallback">Select a flower to view!</p>
+    }
+
 </main>
 

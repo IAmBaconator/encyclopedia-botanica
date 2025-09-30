@@ -13,7 +13,7 @@ import { BotanicaItems } from "./botanica-items/botanica-items";
 export class App {
   protected readonly title = signal('encyclopedia-botanica');
   botanicaItems = DUMMY_ITEMS;
-  selectedBotanicaItemId = 'i1';
+  selectedBotanicaItemId?: string;
 
   get selectedBotanicaItem() {
     return this.botanicaItems.find((BotanicaItem) => BotanicaItem.id === this.selectedBotanicaItemId);
