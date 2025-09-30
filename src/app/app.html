@@ -1,1 +1,41 @@
-<app-header></app-header>
+<app-header />
+
+<main>
+    <ul id="botanical-items">
+        <li>
+            <app-botanical-item
+                [id]="botanicalItems[0].id"
+                [avatar]="botanicalItems[0].avatar"
+                [name]="botanicalItems[0].name"
+                (select)="onSelectBotanicalItem($event)"
+            />
+        </li>
+        <li>
+            <app-botanical-item
+                [id]="botanicalItems[1].id"
+                [avatar]="botanicalItems[1].avatar"
+                [name]="botanicalItems[1].name"
+                (select)="onSelectBotanicalItem($event)"
+            />
+        </li>
+        <li>
+            <app-botanical-item
+                [id]="botanicalItems[2].id"
+                [avatar]="botanicalItems[2].avatar"
+                [name]="botanicalItems[2].name"
+                (select)="onSelectBotanicalItem($event)"
+            />
+        </li>
+        <li>
+            <app-botanical-item
+                [id]="botanicalItems[3].id"
+                [avatar]="botanicalItems[3].avatar"
+                [name]="botanicalItems[3].name"
+                (select)="onSelectBotanicalItem($event)"
+            />
+        </li>
+    </ul>
+
+    <app-botanical-items [name]="selectedBotanicalItem.name" [avatar]="selectedBotanicalItem.avatar" />
+</main>
+
