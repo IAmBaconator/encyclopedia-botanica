@@ -14,11 +14,6 @@ interface BotanicalItemObj {
 })
 export class BotanicalItem {
 
-  // input = special function for newer setup using with signals.
-  //id = input.required<string>();
-  //avatar = input.required<string>(); // <string> = input<T>(): InputSignal<T>; a TS initialization for an Angular value.
-  //name = input.required<string>();
-
   botanicalItemObj = input.required<BotanicalItemObj>(); // 
   select = output<string>(); // Declares an output that emits strings.
 
