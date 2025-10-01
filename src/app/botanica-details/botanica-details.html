@@ -9,7 +9,7 @@
   <ul>
     @for (note of selectedBotanicaItemNotes; track note.id) {
       <li>
-        <app-botanica-note [noteObj]="note" />
+        <app-botanica-note [noteObj]="note" (delete)="onDeleteBotanicaNote($event)" />
       </li>
     }
   </ul>

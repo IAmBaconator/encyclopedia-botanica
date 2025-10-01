@@ -50,4 +50,9 @@ export class BotanicaDetails {
   get selectedBotanicaItemNotes() {
     return this.notes.filter((note) => note.botanicaItemId === this.botanicaItemId);
   }
+
+  onDeleteBotanicaNote(id: string) {
+    console.log('Note deleted!');
+    this.notes = this.notes.filter((note) => note.id !== id);
+  }
 }

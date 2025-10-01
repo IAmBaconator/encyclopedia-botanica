@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { type NoteObj } from './botanica-note.model';
 
 @Component({
@@ -9,4 +9,9 @@ import { type NoteObj } from './botanica-note.model';
 })
 export class BotanicaNote {
   noteObj = input.required<NoteObj>();
+  delete = output<string>();
+
+  onDeleteBotanicaNote() {
+    this.delete.emit(this.noteObj().id);
+  }
 }
