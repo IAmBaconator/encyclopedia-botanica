@@ -1,5 +1,5 @@
 <div>
-    <button (click)="onSelectBotanicaItem()">
+    <button [class.active]="selected()" (click)="onSelectBotanicaItem()">
 
         <!-- property binding is the better option that binds the src/alt properties of the underlying HTMLImageElement DOM object to the value. -->
         <img

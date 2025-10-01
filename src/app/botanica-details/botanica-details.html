@@ -1,15 +1,20 @@
+@if (isAddingNote) {
+  <app-add-botanica-note (cancel)="onCancelAddBotanicaNote()" (add)="onAddNote($event)" />
+}
+
 <section  id="botanica-details">
   <header>
     <h2>{{ name() }} Details</h2>
-    <img [src] ="imagePath()" [alt]="name()" />
     <menu>
-      <button>Add Note</button>
+      <button (click)="onCreateBotanicaNote()">Add Note</button>
     </menu>
   </header>
-
+<img [src] ="imagePath()" [alt]="name()" />
   <ul>
-    <li>
-
-    </li>
+    @for (note of selectedBotanicaItemNotes; track note.id) {
+      <li>
+        <app-botanica-note [noteObj]="note" (delete)="onDeleteBotanicaNote($event)" />
+      </li>
+    }
   </ul>
 </section>
