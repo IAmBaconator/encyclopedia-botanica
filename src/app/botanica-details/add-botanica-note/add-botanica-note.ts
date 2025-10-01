@@ -18,4 +18,8 @@ export class AddBotanicaNote {
   onCancel() {
     this.cancel.emit();
   }
+
+  onSubmit() {
+    
+  }
 }
