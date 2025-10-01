@@ -25,7 +25,7 @@ main {
 
 @media (min-width: 768px) {
   main {
-    margin: 4rem auto;
+    margin: 2rem auto;
     grid-template-columns: 1fr 3fr;
   }
 
