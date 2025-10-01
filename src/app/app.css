@@ -7,7 +7,7 @@ main {
   gap: 2rem;
 }
 
-#botanical-items {
+#botanica-details {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -25,11 +25,11 @@ main {
 
 @media (min-width: 768px) {
   main {
-    margin: 4rem auto;
+    margin: 2rem auto;
     grid-template-columns: 1fr 3fr;
   }
 
-  #botanical-items {
+  #botanica-details {
     flex-direction: column;
   }
 

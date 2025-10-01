@@ -9,7 +9,7 @@ export const DUMMY_ITEMS = [
     id: 'i2',
     name: 'Anemone',
     avatar: 'anemone_avatar.png',
-    profile: 'aneomone.png',
+    profile: 'anemone.png',
   },
   {
     id: 'i3',
