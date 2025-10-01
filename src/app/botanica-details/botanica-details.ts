@@ -61,4 +61,8 @@ export class BotanicaDetails {
   onCreateBotanicaNote() {
     this.isAddingNote = true;
   }
+
+  onCancelAddBotanicaNote() {
+    this.isAddingNote = false;
+  }
 }
