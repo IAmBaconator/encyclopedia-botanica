@@ -4,7 +4,7 @@
     <ul id="botanica-details">
         @for (botanicaItem of botanicaItems; track botanicaItem.id) {
             <li>
-                <app-botanica-item [botanicaItemObj]="botanicaItem" (select)="onSelectBotanicaItem($event)" />
+                <app-botanica-item [botanicaItemObj]="botanicaItem" [selected]="botanicaItem.id === selectedBotanicaItemId" (select)="onSelectBotanicaItem($event)" />
             </li>
 
         }

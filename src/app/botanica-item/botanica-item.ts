@@ -8,9 +8,10 @@ import { type BotanicaItemObj } from './botanica-item.model';
 })
 export class BotanicaItem {
 
-  botanicaItemObj = input.required<BotanicaItemObj>(); // 
-  select = output<string>(); // Declares an output that emits strings.
+  botanicaItemObj = input.required<BotanicaItemObj>();
 
+  select = output<string>(); // Declares an output that emits strings.
+  selected = input.required<boolean>();
   imagePath = computed(() => {
     return 'assets/botanica-items/' + this.botanicaItemObj().avatar; // Add back in after I import my own flowers.
   });
