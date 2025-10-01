@@ -1,11 +1,5 @@
 import { Component, computed, input, output } from '@angular/core';
-
-interface BotanicaItemObj {
-  id: string;
-  avatar: string;
-  name: string;
-  profile: string;
-}
+import { type BotanicaItemObj } from './botanica-item.model';
 
 @Component({
   selector: 'app-botanica-item',

@@ -1,12 +1,5 @@
 import { Component, input } from '@angular/core';
-
-interface NoteObj {
-  id: string;
-  botanicaItemId: string;
-  title: string;
-  summary: string;
-  noteDate: string;
-}
+import { type NoteObj } from './botanica-note.model';
 
 @Component({
   selector: 'app-botanica-note',
