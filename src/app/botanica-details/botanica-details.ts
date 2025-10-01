@@ -1,6 +1,7 @@
 import { Component, computed, Input, input } from '@angular/core';
 import { BotanicaNote } from "./botanica-note/botanica-note";
 import { AddBotanicaNote } from './add-botanica-note/add-botanica-note';
+import { type NewNoteData } from './botanica-note/botanica-note.model';
 
 @Component({
   selector: 'app-botanica-details',
@@ -63,6 +64,17 @@ export class BotanicaDetails {
   }
 
   onCancelAddBotanicaNote() {
+    this.isAddingNote = false;
+  }
+
+  onAddNote(noteData: NewNoteData) {
+    this.notes.push({
+      id: new Date().getTime().toString(),
+      botanicaItemId: this.botanicaItemId,
+      title: noteData.title,
+      summary: noteData.summary,
+      noteDate: noteData.date
+    })
     this.isAddingNote = false;
   }
 }

@@ -1,5 +1,6 @@
 import { Component, output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { type NewNoteData } from '../botanica-note/botanica-note.model';
 
 @Component({
   selector: 'app-add-botanica-note',
@@ -9,8 +10,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AddBotanicaNote {
   cancel = output<void>();
-
-  //form variables
+  add = output<NewNoteData>();
   enteredTitle = signal('');
   enteredSummary = signal('');
   enteredDate = signal('');
@@ -20,6 +20,10 @@ export class AddBotanicaNote {
   }
 
   onSubmit() {
-    
+    this.add.emit({
+      title: this.enteredTitle(),
+      summary: this.enteredSummary(),
+      date: this.enteredDate()
+    })
   }
 }

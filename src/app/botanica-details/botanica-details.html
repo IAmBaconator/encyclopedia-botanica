@@ -1,5 +1,5 @@
 @if (isAddingNote) {
-  <app-add-botanica-note (cancel)="onCancelAddBotanicaNote()" />
+  <app-add-botanica-note (cancel)="onCancelAddBotanicaNote()" (add)="onAddNote($event)" />
 }
 
 <section  id="botanica-details">

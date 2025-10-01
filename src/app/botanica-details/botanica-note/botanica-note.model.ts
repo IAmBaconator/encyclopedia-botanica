@@ -5,3 +5,9 @@ export interface NoteObj {
   summary: string;
   noteDate: string;
 }
+
+export interface NewNoteData {
+  title: string;
+  summary: string;
+  date: string;
+}
