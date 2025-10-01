@@ -11,7 +11,7 @@
     </ul>
 
     @if (selectedBotanicaItem) {
-            <app-botanica-details [name]="selectedBotanicaItem.name" [profile]="selectedBotanicaItem.profile" />
+            <app-botanica-details [botanicaItemId]="selectedBotanicaItem.id" [name]="selectedBotanicaItem.name" [profile]="selectedBotanicaItem.profile" />
     } @else {
         <p id="fallback">Select a flower to view!</p>
     }

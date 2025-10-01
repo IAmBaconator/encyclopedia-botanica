@@ -7,14 +7,10 @@
   </header>
 <img [src] ="imagePath()" [alt]="name()" />
   <ul>
-    <li>
-      <app-botanica-note />
-    </li>
-    <li>
-      <app-botanica-note />
-    </li>
-    <li>
-      <app-botanica-note />
-    </li>
+    @for (note of selectedBotanicaItemNotes; track note.id) {
+      <li>
+        <app-botanica-note [noteObj]="note" />
+      </li>
+    }
   </ul>
 </section>

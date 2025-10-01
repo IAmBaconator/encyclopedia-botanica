@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { Header } from "./header/header";
 import { BotanicaItem } from "./botanica-item/botanica-item";
 import { DUMMY_ITEMS } from './dummy-items';
