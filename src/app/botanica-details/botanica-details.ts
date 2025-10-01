@@ -1,8 +1,9 @@
 import { Component, computed, input } from '@angular/core';
+import { BotanicaNote } from "./botanica-note/botanica-note";
 
 @Component({
   selector: 'app-botanica-details',
-  imports: [],
+  imports: [BotanicaNote],
   templateUrl: './botanica-details.html',
   styleUrl: './botanica-details.css'
 })

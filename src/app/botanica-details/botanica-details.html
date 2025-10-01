@@ -1,15 +1,20 @@
 <section  id="botanica-details">
   <header>
     <h2>{{ name() }} Details</h2>
-    <img [src] ="imagePath()" [alt]="name()" />
     <menu>
       <button>Add Note</button>
     </menu>
   </header>
-
+<img [src] ="imagePath()" [alt]="name()" />
   <ul>
     <li>
-
+      <app-botanica-note />
+    </li>
+    <li>
+      <app-botanica-note />
+    </li>
+    <li>
+      <app-botanica-note />
     </li>
   </ul>
 </section>
