@@ -1,9 +1,10 @@
 import { Component, computed, Input, input } from '@angular/core';
 import { BotanicaNote } from "./botanica-note/botanica-note";
+import { AddBotanicaNote } from './add-botanica-note/add-botanica-note';
 
 @Component({
   selector: 'app-botanica-details',
-  imports: [BotanicaNote],
+  imports: [BotanicaNote, AddBotanicaNote],
   templateUrl: './botanica-details.html',
   styleUrl: './botanica-details.css'
 })
@@ -16,6 +17,7 @@ export class BotanicaDetails {
   imagePath = computed(() => {
     return 'assets/botanica-items/' + this.profile(); // Add back in after I import my own flowers.
   });
+  isAddingNote = false;
   notes = [
     {
       id: 'n1',
@@ -54,5 +56,9 @@ export class BotanicaDetails {
   onDeleteBotanicaNote(id: string) {
     console.log('Note deleted!');
     this.notes = this.notes.filter((note) => note.id !== id);
+  }
+
+  onCreateBotanicaNote() {
+    this.isAddingNote = true;
   }
 }

@@ -1,8 +1,12 @@
+@if (isAddingNote) {
+  <app-add-botanica-note />
+}
+
 <section  id="botanica-details">
   <header>
     <h2>{{ name() }} Details</h2>
     <menu>
-      <button>Add Note</button>
+      <button (click)="onCreateBotanicaNote()">Add Note</button>
     </menu>
   </header>
 <img [src] ="imagePath()" [alt]="name()" />
