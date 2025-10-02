@@ -1,5 +1,5 @@
 @if (isAddingNote) {
-  <app-add-botanica-note (cancel)="onCancelAddBotanicaNote()" (add)="onAddNote($event)" />
+  <app-add-botanica-note [botanicaItemId]="botanicaItemId" (close)="onCloseAddBotanicaNote()" />
 }
 
 <section  id="botanica-details">
@@ -13,7 +13,7 @@
   <ul>
     @for (note of selectedBotanicaItemNotes; track note.id) {
       <li>
-        <app-botanica-note [noteObj]="note" (delete)="onDeleteBotanicaNote($event)" />
+        <app-botanica-note [noteObj]="note" />
       </li>
     }
   </ul>

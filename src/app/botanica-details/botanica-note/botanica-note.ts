@@ -1,8 +1,9 @@
-import { Component, input, output } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
 import { type NoteObj } from './botanica-note.model';
 import { Card } from "../../shared/card/card";
+import { BotanicaDetailsService } from '../botanica-details.service';
 
 @Component({
   selector: 'app-botanica-note',
@@ -12,9 +13,9 @@ import { Card } from "../../shared/card/card";
 })
 export class BotanicaNote {
   noteObj = input.required<NoteObj>();
-  delete = output<string>();
+  private botanicaDetailsService = inject(BotanicaDetailsService)
 
   onDeleteBotanicaNote() {
-    this.delete.emit(this.noteObj().id);
+    this.botanicaDetailsService.removeNote(this.noteObj().id)
   }
 }
