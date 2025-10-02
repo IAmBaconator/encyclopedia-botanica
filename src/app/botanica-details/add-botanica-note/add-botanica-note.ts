@@ -1,6 +1,9 @@
-import { Component, output, signal } from '@angular/core';
+import { Component, inject, input, output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+
 import { type NewNoteData } from '../botanica-note/botanica-note.model';
+import { BotanicaDetailsService } from '../botanica-details.service';
+import { TitleStrategy } from '@angular/router';
 
 @Component({
   selector: 'app-add-botanica-note',
@@ -9,21 +12,27 @@ import { type NewNoteData } from '../botanica-note/botanica-note.model';
   styleUrl: './add-botanica-note.css'
 })
 export class AddBotanicaNote {
-  cancel = output<void>();
-  add = output<NewNoteData>();
+  botanicaItemId = input.required<string>();
+  close = output<void>();
+  //add = output<NewNoteData>();
   enteredTitle = signal('');
   enteredSummary = signal('');
   enteredDate = signal('');
+  private botanicaDetailsService = inject(BotanicaDetailsService)
   
   onCancel() {
-    this.cancel.emit();
+    this.close.emit();
   }
 
   onSubmit() {
-    this.add.emit({
-      title: this.enteredTitle(),
-      summary: this.enteredSummary(),
-      date: this.enteredDate()
-    })
+    this.botanicaDetailsService.addBotanicaNote(
+      {
+        title: this.enteredTitle(),
+        summary: this.enteredSummary(),
+        date: this.enteredDate(),
+      }, 
+      this.botanicaItemId()
+    );
+    this.close.emit();
   }
 }
