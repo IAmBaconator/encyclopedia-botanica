@@ -1,4 +1,5 @@
 # encyclopedia-botanica
+A small project I built as a refresher to familiarize myself with Angular and the core foundations of Components, Modules, and Services.
 A library of trees, plants, flowers, and other residences in my yard.
 
 
