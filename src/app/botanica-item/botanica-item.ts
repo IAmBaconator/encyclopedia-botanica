@@ -1,10 +1,12 @@
 import { Component, computed, input, output } from '@angular/core';
 import { type BotanicaItemObj } from './botanica-item.model';
+import { Card } from "../shared/card/card";
 
 @Component({
   selector: 'app-botanica-item',
   templateUrl: './botanica-item.html',
-  styleUrl: './botanica-item.css'
+  styleUrl: './botanica-item.css',
+  imports: [Card]
 })
 export class BotanicaItem {
 
