@@ -34,6 +34,14 @@ export class BotanicaDetailsService {
     },
   ];
 
+  constructor() {
+    const notes = localStorage.getItem('notes')
+
+    if (notes) {
+      this.notes = JSON.parse(notes);
+    }
+  }
+
   getBotanicaNotes(botanicaItemId: string) {
     return this.notes.filter((note) => note.botanicaItemId === botanicaItemId);
   }
@@ -45,10 +53,16 @@ export class BotanicaDetailsService {
       title: noteData.title,
       summary: noteData.summary,
       noteDate: noteData.date
-    })
+    });
+    this.saveNotes();
   }
 
   removeNote(id: string) {
     this.notes = this.notes.filter((note) => note.id !== id);
+    this.saveNotes();
+  }
+
+  private saveNotes() {
+    localStorage.setItem('notes',JSON.stringify(this.notes));
   }
 }
