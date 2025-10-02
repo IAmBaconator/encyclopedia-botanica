@@ -14,7 +14,6 @@ import { TitleStrategy } from '@angular/router';
 export class AddBotanicaNote {
   botanicaItemId = input.required<string>();
   close = output<void>();
-  //add = output<NewNoteData>();
   enteredTitle = signal('');
   enteredSummary = signal('');
   enteredDate = signal('');

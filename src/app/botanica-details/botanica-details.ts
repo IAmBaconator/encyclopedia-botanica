@@ -26,8 +26,6 @@ export class BotanicaDetails {
     return this.botanicaDetailsService.getBotanicaNotes(this.botanicaItemId);
   }
 
-  onDeleteBotanicaNote(id: string) {}
-
   onCreateBotanicaNote() {
     this.isAddingNote = true;
   }
