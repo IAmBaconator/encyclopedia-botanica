@@ -1,10 +1,12 @@
 import { Component, input, output } from '@angular/core';
+import { DatePipe } from '@angular/common';
+
 import { type NoteObj } from './botanica-note.model';
 import { Card } from "../../shared/card/card";
 
 @Component({
   selector: 'app-botanica-note',
-  imports: [Card],
+  imports: [Card, DatePipe],
   templateUrl: './botanica-note.html',
   styleUrl: './botanica-note.css'
 })

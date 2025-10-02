@@ -1,7 +1,7 @@
 <app-card>
     <article>
         <h2>{{ noteObj().title }}</h2>
-        <time>{{ noteObj().noteDate }}</time>
+        <time>{{ noteObj().noteDate | date:'full' }}</time>
         <p>{{ noteObj().summary }}</p>
         <p class="actions">
             <button (click)="onDeleteBotanicaNote()">Delete</button>
